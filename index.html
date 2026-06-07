@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>RECMEH: Record your study sessions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css"/>
+</head>
+
+<body>
+    <br><br>
+    <div id="app">
+        <br>
+        <h1>RECMEH</h1>
+        <h2>Record your study sessions + more</h2>
+        <br><br>
+        <div class="previews">
+            <img src="./assets/leaf.png" class="leaf">
+            <div class="pbox gridcenter" id="cam-box">
+                <div class="ph" id="cam-ph"><i class="ti ti-camera" aria-hidden="true"></i></div>
+                <video id="cam-vid" autoplay muted playsinline></video>
+                <span class="plbl" id="cam-lbl">Camera</span>
+            </div>
+            <div class="pbox gridcenter" id="scr-box">
+                <div class="ph" id="scr-ph"><i class="ti ti-screen-share" aria-hidden="true"></i>
+                </div>
+                <video id="scr-vid" autoplay muted playsinline></video>
+                <span class="plbl" id="scr-lbl">Screen</span>
+            </div>
+        </div>
+        <div class="fixed">
+            <div class="flex">
+                <div class="dot" id="dot"></div>
+                <span id="status">Ready</span>
+            </div>
+            <button class="bar" id="btn-export">
+                <ion-icon name="download-outline"></ion-icon>
+            </button>
+            <button class="bar" id="btn-start">
+                <ion-icon name="play-circle-outline"></ion-icon>
+            </button>
+            <button class="bar" id="btn-pip">
+                <ion-icon name="copy-outline"></ion-icon>
+            </button>
+            <div class="stat">
+                <div class="stat-v" id="elapsed">0:00:00</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+                    
+        <div id="export-section">
+            <div id="snaps-wrap">
+                <img src="./assets/branch.png" class="branch">
+                <div class="sec-title">Snapshots</div>
+                <div class="snap-list" id="snap-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.2/build/mp4-muxer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="introduction.js"></script>
+    <script type="module" src="scripts.js"></script>
+</body>
+
+</html>
